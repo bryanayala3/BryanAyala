@@ -18,6 +18,7 @@ function processRegistration(event) {
     alert("Please fill in the username.");
   } else {
     localStorage.setItem("RegisteredUsers", username + ":" + password + ";");
+    alert("Registration Success!");
   }
 }
 
