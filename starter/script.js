@@ -14,7 +14,11 @@ function processRegistration(event) {
   let password = document.getElementById("password").value;
   //console.log(username);
 
-  localStorage.setItem("RegisteredUsers", username + ":" + password + ";");
+  if (username.trim() === "") {
+    alert("Please fill in the username.");
+  } else {
+    localStorage.setItem("RegisteredUsers", username + ":" + password + ";");
+  }
 }
 
 function processLogin(event) {
